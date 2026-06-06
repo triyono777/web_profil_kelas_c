@@ -17,9 +17,16 @@ const anggota = [
   "Kurnia Ayu Anjani"
 ];
 
+const FOTO_KAMPUS = "64eec4a2b474d537914047.jpg";
+
 const galeri = [
-  "Orientasi Mahasiswa", "Praktikum Lab", "Study Tour", "Kerja Kelompok",
-  "Seminar Teknologi", "Buka Bersama"
+  { title: "Kampus UDB Surakarta", img: FOTO_KAMPUS, span: true },
+  { title: "Orientasi Mahasiswa", icon: "\u{1F393}" },
+  { title: "Praktikum Lab", icon: "\u{1F4BB}" },
+  { title: "Study Tour", icon: "\u{1F68C}" },
+  { title: "Kerja Kelompok", icon: "\u{1F465}" },
+  { title: "Seminar Teknologi", icon: "\u{1F399}\uFE0F" },
+  { title: "Buka Bersama", icon: "\u{1F37D}\uFE0F" }
 ];
 
 /* ===== Helpers ===== */
@@ -80,11 +87,20 @@ function renderMembers(list) {
 /* ===== Render Galeri ===== */
 function renderGallery() {
   const grid = document.getElementById("galleryGrid");
-  grid.innerHTML = galeri.map((title) => `
-    <div class="gallery-item reveal" style="background:${gradientFor(title)}">
-      <span>${title}</span>
-    </div>
-  `).join("");
+  grid.innerHTML = galeri.map((item) => {
+    if (item.img) {
+      return `
+    <figure class="gallery-item gallery-photo${item.span ? " gallery-span" : ""}">
+      <img src="${item.img}" alt="${item.title}" loading="lazy" />
+      <figcaption>${item.title}</figcaption>
+    </figure>`;
+    }
+    return `
+    <figure class="gallery-item reveal" style="background:${gradientFor(item.title)}">
+      <div class="gallery-icon">${item.icon}</div>
+      <figcaption>${item.title}</figcaption>
+    </figure>`;
+  }).join("");
 }
 
 /* ===== Search ===== */
