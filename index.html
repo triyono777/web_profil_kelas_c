@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profil Kelas C - Sistem Informasi Angkatan 2023, Universitas Duta Bangsa Surakarta" />
+  <title>Profil Kelas C - Sistem Informasi 2023 | UDB Surakarta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">SI</span>
+        <span class="brand-text">Kelas C <small>Sistem Informasi 2023</small></span>
+      </a>
+      <nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#structure">Struktur</a></li>
+          <li><a href="#members">Anggota</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-tag">Universitas Duta Bangsa Surakarta</p>
+      <h1>Kelas <span>C</span> Sistem Informasi</h1>
+      <p class="hero-sub">Angkatan 2023 &mdash; Belajar, Berkarya, dan Bertumbuh Bersama</p>
+      <div class="hero-actions">
+        <a href="#members" class="btn btn-primary">Lihat Anggota</a>
+        <a href="#about" class="btn btn-ghost">Tentang Kami</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#stats" aria-label="Gulir ke bawah">&#x2193;</a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat-card"><span class="stat-num" data-target="7">0</span><p>Total Anggota</p></div>
+      <div class="stat-card"><span class="stat-num" data-target="2023">0</span><p>Angkatan</p></div>
+      <div class="stat-card"><span class="stat-num" data-target="6">0</span><p>Mata Kuliah/Smt</p></div>
+      <div class="stat-card"><span class="stat-num" data-target="1">0</span><p>Kelas Solid</p></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Tentang Kami</span>
+        <h2>Mengenal Kelas C Lebih Dekat</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Kami adalah <strong>Kelas C Program Studi Sistem Informasi Angkatan 2023</strong>
+            di Universitas Duta Bangsa Surakarta. Kelas ini terdiri dari mahasiswa-mahasiswi
+            yang antusias mempelajari teknologi informasi, pengembangan perangkat lunak,
+            analisis sistem, hingga manajemen data.
+          </p>
+          <p>
+            Dengan semangat kolaborasi, kami berkomitmen untuk saling mendukung dalam
+            perkuliahan, proyek, dan pengembangan diri agar siap menghadapi dunia kerja
+            di bidang teknologi.
+          </p>
+          <ul class="about-list">
+            <li>Kolaboratif &amp; solid dalam tim</li>
+            <li>Aktif di kegiatan akademik dan organisasi</li>
+            <li>Fokus pada teknologi dan inovasi</li>
+          </ul>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <div class="info-icon">&#127891;</div>
+            <h3>Visi</h3>
+            <p>Menjadi kelas yang unggul, kreatif, dan berdaya saing di bidang sistem informasi.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">&#128640;</div>
+            <h3>Misi</h3>
+            <p>Mengembangkan kompetensi akademik, soft skill, dan kebersamaan antar anggota kelas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structure -->
+  <section class="section section-alt" id="structure">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Struktur Kelas</span>
+        <h2>Pengurus Kelas</h2>
+      </div>
+      <div class="structure-grid" id="structureGrid"></div>
+    </div>
+  </section>
+
+  <!-- Members -->
+  <section class="section" id="members">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Anggota</span>
+        <h2>Mahasiswa Kelas C</h2>
+      </div>
+      <div class="members-toolbar">
+        <input type="text" id="searchInput" class="search-input" placeholder="Cari nama anggota..." />
+      </div>
+      <div class="members-grid" id="membersGrid"></div>
+      <p class="no-result" id="noResult" hidden>Tidak ada anggota yang cocok.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Galeri</span>
+        <h2>Momen Kebersamaan</h2>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Kontak</span>
+        <h2>Hubungi Kami</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">&#128205;</span>
+            <div><h4>Alamat</h4><p>Universitas Duta Bangsa Surakarta, Jl. Bhayangkara No.55, Surakarta, Jawa Tengah</p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#9993;</span>
+            <div><h4>Email</h4><p>kelasc.si2023@udb.ac.id</p></div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">&#127760;</span>
+            <div><h4>Website Kampus</h4><p>www.udb.ac.id</p></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama lengkap" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">SI</span>
+        <div>
+          <strong>Kelas C - Sistem Informasi 2023</strong>
+          <p>Universitas Duta Bangsa Surakarta</p>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Kelas C Sistem Informasi UDB Surakarta. Dibuat dengan &#10084;.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">&#x2191;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
