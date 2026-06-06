@@ -92,10 +92,17 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 .hero-overlay {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(245,158,11,0.25), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(99,102,241,0.35), transparent 40%);
+  position: absolute; 
+  inset: 0;
+  background-image: url('64eec4a2b474d537914047.jpg');
+  
+  /* Mengunci posisi gambar di 20% 30% dan 80% 70% sesuai gradient asli */
+  background-position: 
+    20% 30%, 
+    80% 70%;
+    
+  /* Mengatur ukuran gambar, 40% ini setara dengan batas 'transparent 40%' pada gradient */
+  background-size: 40% auto, 40% auto; 
 }
 .hero-content { position: relative; z-index: 2; padding-top: 80px; }
 .hero-tag {
