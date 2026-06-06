@@ -95,6 +95,7 @@ img { max-width: 100%; display: block; }
   position: absolute; 
   inset: 0;
   background-image: url('64eec4a2b474d537914047.jpg');
+  background-repeat: no-repeat;
   
   /* Mengunci posisi gambar di 20% 30% dan 80% 70% sesuai gradient asli */
   background-position: 
